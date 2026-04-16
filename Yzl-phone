@@ -1,4 +1,4 @@
-# Shadowrocket - Russia Direct, Others Proxy (Single Node Final)
+# Shadowrocket - Russia Direct + Apple Direct + Others Proxy
 
 [General]
 bypass-system = true
@@ -16,6 +16,21 @@ IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
 IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+
+# Apple direct
+DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN-SUFFIX,icloud.com,DIRECT
+DOMAIN-SUFFIX,mzstatic.com,DIRECT
+DOMAIN-SUFFIX,apple-dns.net,DIRECT
+DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+DOMAIN-SUFFIX,apps.apple.com,DIRECT
+DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+DOMAIN-SUFFIX,appstore.com,DIRECT
+DOMAIN-SUFFIX,me.com,DIRECT
+DOMAIN-SUFFIX,mac.com,DIRECT
+DOMAIN-SUFFIX,facetime.apple,DIRECT
+DOMAIN-SUFFIX,push.apple.com,DIRECT
 
 # Russia TLD
 DOMAIN-SUFFIX,ru,DIRECT
@@ -150,4 +165,4 @@ DOMAIN-KEYWORD,hh,DIRECT
 GEOIP,RU,DIRECT
 
 # All others -> your only proxy node
-FINAL,VIP-Yzl-phone
+FINAL,Yzl-phone.conf
