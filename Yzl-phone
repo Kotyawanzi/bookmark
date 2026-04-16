@@ -165,4 +165,4 @@ DOMAIN-KEYWORD,hh,DIRECT
 GEOIP,RU,DIRECT
 
 # All others -> your only proxy node
-FINAL,Yzl-phone.conf
+FINAL,VIP-Yzl-phone
