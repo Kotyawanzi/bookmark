@@ -1,12 +1,11 @@
-# Shadowrocket - Russia Direct + Apple Direct + Others Proxy
+# Shadowrocket - Russia Direct + Apple Updates Direct + Others Proxy
 
 [General]
 bypass-system = true
 ipv6 = true
 prefer-ipv6 = false
 skip-proxy = 127.0.0.1,localhost,*.local,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,100.64.0.0/10,169.254.0.0/16
-dns-server = system,1.1.1.1
-fallback-dns-server = 1.0.0.1
+dns-server = system
 
 [Rule]
 # Local / Private
@@ -17,30 +16,18 @@ IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
 
-# Apple direct
-DOMAIN-SUFFIX,apple.com,DIRECT
-DOMAIN-SUFFIX,icloud.com,DIRECT
-DOMAIN-SUFFIX,icloud-content.com,DIRECT
-DOMAIN-SUFFIX,icloud-content.com.cn,DIRECT
+# Apple App Store / Updates -> DIRECT
+DOMAIN-SUFFIX,apps.apple.com,DIRECT
+DOMAIN-SUFFIX,itunes.apple.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
-DOMAIN-SUFFIX,apple-dns.net,DIRECT
-DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
 DOMAIN-SUFFIX,cdn-apple.com,DIRECT
 DOMAIN-SUFFIX,appstore.com,DIRECT
-DOMAIN-SUFFIX,me.com,DIRECT
-DOMAIN-SUFFIX,mac.com,DIRECT
-DOMAIN-SUFFIX,apple-relay.cloud,DIRECT
-DOMAIN,apps.apple.com,DIRECT
-DOMAIN,itunes.apple.com,DIRECT
-DOMAIN,push.apple.com,DIRECT
-DOMAIN,mail.icloud.com,DIRECT
-DOMAIN,mask.icloud.com,DIRECT
-DOMAIN,mail.me.com,DIRECT
-DOMAIN,privaterelay.appleid.com,DIRECT
+DOMAIN-SUFFIX,appleusercontent.com,DIRECT
+DOMAIN-SUFFIX,aaplimg.com,DIRECT
 
-# Optional Apple fallback
-DOMAIN-KEYWORD,icloud,DIRECT
-DOMAIN-KEYWORD,apple,DIRECT
+# domonap -> DIRECT
+DOMAIN-SUFFIX,domonap.ru,DIRECT
+DOMAIN-KEYWORD,domonap,DIRECT
 
 # Russia TLD
 DOMAIN-SUFFIX,ru,DIRECT
@@ -170,9 +157,10 @@ DOMAIN-KEYWORD,tele2,DIRECT
 DOMAIN-KEYWORD,mts,DIRECT
 DOMAIN-KEYWORD,2gis,DIRECT
 DOMAIN-KEYWORD,hh,DIRECT
+DOMAIN-KEYWORD,domonap,DIRECT
 
 # Russia IP
 GEOIP,RU,DIRECT
 
-# All others -> your only proxy node
-FINAL,VIP-Yzl-phone
+# All others -> Proxy
+FINAL,VIP-Yzj-Phone
